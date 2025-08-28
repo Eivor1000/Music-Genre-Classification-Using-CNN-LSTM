@@ -1,5 +1,12 @@
 ﻿**Project Report: Music Genre Classification using CNN + LSTM**
 
+Project structure:
+
+- `src/`: training and inference scripts (`main.py`, `predict.py`)
+- `data/genres_original/`: GTZAN dataset (10 genre folders)
+- `models/`: saved models (`genre_model_fold*.keras`) and encoder (`labelencoder.pkl`)
+- `docs/`: documentation (`readme.md`, `report.docx`)
+
 **1. Introduction**
 
 This project focuses on building a music genre classification system using deep learning. It utilizes **MFCC (Mel Frequency Cepstral Coefficients)** as audio features and combines **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** networks to learn spatial and temporal features from audio data. The model is trained using **K-Fold Cross-Validation**, and a **frontend** allows users to predict the genre of an audio file.
@@ -56,8 +63,9 @@ This project focuses on building a music genre classification system using deep 
 -----
 **6. Prediction**
 
-- **Frontend**: A simple UI built using tkinter or streamlit for browsing a .wav file and displaying the predicted genre
-- **Inference**: Loads genre\_model\_fold4.keras and labelencoder.pkl, extracts MFCCs, reshapes them to match model input, and returns top predicted genre
+- **Inference script**: `src/predict.py`
+- **Models/encoder location**: `models/genre_model_fold4.keras`, `models/labelencoder.pkl`
+- **Data path**: `data/genres_original/...`
 -----
 **7. Performance**
 
